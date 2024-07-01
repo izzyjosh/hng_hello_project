@@ -37,7 +37,7 @@ def get_temperature(city):
 class Hello(APIView):
 
     def get(self,request,format=None):
-        visitor_name = request.GET.get("visitor_name")
+        visitor_name = request.GET.get("visitor_name","Guest")
         ipaddr = request.META.get("REMOTE_ADDR")
         city = get_city(ipaddr)
         temperature = get_temperature(city)
