@@ -84,9 +84,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, “staticfiles_build”, “static”)
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 STATIC_URL = "/staticfiles/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, “static”)]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # Internationalization
 LANGUAGE_CODE = "en-us"
