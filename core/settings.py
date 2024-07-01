@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "djangecb3ceb36ead0450db47bfef46586a9cd77c02befd566d6af317493a6693a83bb583989fdd118c7657257c4a29f4b1fcadc8"
+SECRET_KEY = os.envuron.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -99,7 +99,7 @@ USE_TZ = True
 
 
 #ipinfo API key
-IPINFO_API_TOKEN = "c5d3ea64ad4c30"
+IPINFO_API_TOKEN = os.environ.get("IPINFO_TOKEN")
 
 #openwhethermap api key
-OPENWHETHER_API = "fc4b24a0bfb27829b9d480e3f8dc0c30"
+OPENWHETHER_API = os.environ.get("OPENWHETHER_API_KEY")
