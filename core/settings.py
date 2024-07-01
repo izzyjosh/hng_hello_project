@@ -11,7 +11,8 @@ SECRET_KEY = "djangecb3ceb36ead0450db47bfef46586a9cd77c02befd566d6af317493a6693a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
