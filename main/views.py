@@ -1,8 +1,10 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
+from rest_framework.renderers import JSONRenderer
 from django.conf import settings
 from rest_framework import status
+from django.http import JsonResponse
 
 def get_city(ip_address):
     ipinfo_token = settings.IPINFO_API_TOKEN
@@ -47,5 +49,6 @@ class Hello(APIView):
                 "location": f"{city}",
                 "greeting":f"Hello, {visitor_name}!, the temperature is {temperature} degrees Celcius in {city}",
                 }
-        return Response(response,status=status.HTTP_200_OK)
+
+        return JsonResponse(response)
 
